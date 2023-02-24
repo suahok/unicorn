@@ -1,0 +1,74 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/home",
+      "style": {}
+    },
+    {
+      "path": "pages/community/community",
+      "style": {}
+    },
+    {
+      "path": "pages/compass/compass",
+      "style": {}
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {}
+    }
+  ],
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#aab2bd",
+    "selectedColor": "#f6bb42",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "./static/tabbar/home.png",
+        "selectedIconPath": "./static/tabbar/home_check.png"
+      },
+      {
+        "text": "社区",
+        "pagePath": "pages/community/community",
+        "iconPath": "./static/tabbar/community.png",
+        "selectedIconPath": "./static/tabbar/community_check.png"
+      },
+      {
+        "text": "指南",
+        "pagePath": "pages/compass/compass",
+        "iconPath": "./static/tabbar/compass.png",
+        "selectedIconPath": "./static/tabbar/compass_check.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./static/tabbar/user.png",
+        "selectedIconPath": "./static/tabbar/user_check.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    // #ifndef MP-ALIPAY
+    "navigationBarTextStyle": "black",
+    // #endif
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "mp-weixin": {
+      "backgroundColor": "#ffffff",
+      "backgroundTextStyle": "dark"
+    },
+    "app-plus": {
+      "backgroundColorTop": "#f4f4f4",
+      "backgroundColorBottom": "#f4f4f4"
+    }
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^(vu)-(.*)": "@/components/vu-$2/vu-$2.vue"
+    }
+  }
+}
