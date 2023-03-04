@@ -28,7 +28,7 @@ function onSwiperChange(evt: any) {
             <image
               lazy-load
               :class="['image', currentSwiper === i && 'image-active']"
-              :src="`https://picsum.photos/750/375?random=${i}`"
+              :src="`https://picsum.photos/750/422?random=${i}`"
               mode="aspectFill"
             />
           </view>
