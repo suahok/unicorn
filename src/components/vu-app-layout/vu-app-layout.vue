@@ -5,6 +5,7 @@
     <slot name="appbar"></slot>
     <view class="content">
       <slot></slot>
+      <slot name="content"></slot>
     </view>
   </view>
 </template>

@@ -21,16 +21,18 @@ const onScrolltolower = throttled((evt: any) => {
     <template #appbar>
       <vu-nav-bar title="首页"> </vu-nav-bar>
     </template>
-    <vu-scrollable-view
-      v-model="triggered"
-      refresher-enabled
-      @refresherrefresh="onRefresherrefresh"
-      @scrolltolower="onScrolltolower"
-    >
-      <view v-for="i in counter" :key="i" class="box">
-        <text>{{ i }}</text>
-      </view>
-    </vu-scrollable-view>
+    <view class="home">
+      <vu-scrollable-view
+        v-model="triggered"
+        refresher-enabled
+        @refresherrefresh="onRefresherrefresh"
+        @scrolltolower="onScrolltolower"
+      >
+        <view v-for="i in counter" :key="i" class="box">
+          <text>{{ i }}</text>
+        </view>
+      </vu-scrollable-view>
+    </view>
   </vu-app-layout>
 </template>
 

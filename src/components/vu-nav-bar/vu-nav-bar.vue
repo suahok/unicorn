@@ -3,12 +3,12 @@ import { useSlots } from 'vue'
 import { useScreenInfo } from '@/hooks'
 
 type NavBarProp = {
-  title: string
+  title?: string
   subTitle?: string
-  brightness: 'default' | 'light' | 'dark'
-  translucent: boolean
-  enableNavbar: boolean
-  backgroundColor: string
+  brightness?: 'default' | 'light' | 'dark'
+  translucent?: boolean
+  enableNavbar?: boolean
+  backgroundColor?: string
 }
 
 const props = withDefaults(defineProps<NavBarProp>(), {
@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<NavBarProp>(), {
   brightness: 'default',
   translucent: false,
   enableNavbar: true,
-  backgroundColor: 'rgba(250,250,250,1)'
+  backgroundColor: 'rgba(255,255,255,1)'
 })
 
 const emit = defineEmits(['onSubTitle'])

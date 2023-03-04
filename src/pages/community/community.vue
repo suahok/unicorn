@@ -11,28 +11,30 @@ function onSwiperChange(evt: any) {
     <template #appbar>
       <vu-nav-bar title="社区"></vu-nav-bar>
     </template>
-    <swiper
-      class="swiper"
-      indicator-dots
-      circular
-      autoplay
-      indicator-color="#F5F7FA"
-      indicator-active-color="#ED5565"
-      previous-margin="50rpx"
-      next-margin="50rpx"
-      @change="onSwiperChange"
-    >
-      <swiper-item v-for="i in 5" :key="i">
-        <view :class="['swiper-item', currentSwiper === i && 'swiper-item-active']">
-          <image
-            lazy-load
-            :class="['image', currentSwiper === i && 'image-active']"
-            :src="`https://picsum.photos/750/375?random=${i}`"
-            mode="aspectFill"
-          />
-        </view>
-      </swiper-item>
-    </swiper>
+    <view class="community">
+      <swiper
+        class="swiper"
+        indicator-dots
+        circular
+        autoplay
+        indicator-color="#F5F7FA"
+        indicator-active-color="#ED5565"
+        previous-margin="50rpx"
+        next-margin="50rpx"
+        @change="onSwiperChange"
+      >
+        <swiper-item v-for="i in 5" :key="i">
+          <view :class="['swiper-item', currentSwiper === i && 'swiper-item-active']">
+            <image
+              lazy-load
+              :class="['image', currentSwiper === i && 'image-active']"
+              :src="`https://picsum.photos/750/375?random=${i}`"
+              mode="aspectFill"
+            />
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
   </vu-app-layout>
 </template>
 

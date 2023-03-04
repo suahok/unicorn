@@ -15,13 +15,17 @@
     {
       "path": "pages/mine/mine",
       "style": {}
+    },
+    {
+      "path": "pages/notFound/notFound",
+      "style": {}
     }
   ],
   "tabBar": {
+    "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "color": "#aab2bd",
     "selectedColor": "#f6bb42",
-    "borderStyle": "white",
     "list": [
       {
         "text": "首页",
@@ -54,7 +58,7 @@
     // #ifndef MP-ALIPAY
     "navigationBarTextStyle": "black",
     // #endif
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "unicorn",
     "navigationBarBackgroundColor": "#ffffff",
     "mp-weixin": {
       "backgroundColor": "#ffffff",
