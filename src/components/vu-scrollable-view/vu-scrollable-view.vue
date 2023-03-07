@@ -9,6 +9,8 @@ type ScrollableProp = {
   refresherBackground?: string
   refresherEnabled?: boolean
   modelValue?: boolean
+  fullHeight?: boolean
+  bgColor?: string
 }
 
 const props = withDefaults(defineProps<ScrollableProp>(), {
@@ -18,12 +20,15 @@ const props = withDefaults(defineProps<ScrollableProp>(), {
   refresherDefaultStyle: 'black',
   refresherBackground: '#fff',
   refresherEnabled: false,
-  modelValue: false
+  modelValue: false,
+  fullHeight: false,
+  bgColor: 'transparent'
 })
 const emits = defineEmits(['update:modelValue', 'refresherrefresh', 'scrolltolower'])
 
 const { appBarHeight, screenHeight } = useScreenInfo()
 const scrollZonesHeight = screenHeight - appBarHeight
+const heightType = props.fullHeight ? 'height' : 'max-height'
 
 let triggered = $computed({
   get() {
@@ -54,7 +59,7 @@ function onScrolltolower(evt: any) {
 
 <template>
   <scroll-view
-    :style="{ 'max-height': scrollZonesHeight + 'px' }"
+    :style="{ [heightType]: scrollZonesHeight + 'px', 'background-color': bgColor }"
     class="scrollable"
     :scroll-y="true"
     :scroll-with-animation="true"
@@ -80,7 +85,7 @@ function onScrolltolower(evt: any) {
   box-sizing: border-box;
 
   .space {
-    height: 30rpx;
+    height: 0.875rem;
   }
 }
 </style>

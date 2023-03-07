@@ -21,6 +21,23 @@
       "style": {}
     }
   ],
+  "subPackages": [
+    {
+      "root": "pages-user",
+      "pages": [
+        {
+          "path": "user-settings/user-settings",
+          "style": {}
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/mine/mine": {
+      "network": "all",
+      "packages": ["pages-user"]
+    }
+  },
   "tabBar": {
     "borderStyle": "white",
     "backgroundColor": "#ffffff",

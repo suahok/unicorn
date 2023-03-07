@@ -13,7 +13,7 @@ onPageNotFound(() => {
 </script>
 
 <style lang="scss">
-/* #ifdef MP-WEIXIN */
+/* #ifndef H5 */
 page {
   height: 100%;
   background-color: #f4f4f4;

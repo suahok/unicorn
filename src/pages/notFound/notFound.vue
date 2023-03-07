@@ -1,6 +1,6 @@
 <script setup lang="ts">
 function handleGoBack() {
-  uni.redirectTo({ url: '/pages/home/home' })
+  uni.redirectTo({ url: '/pages/mine/mine' })
 }
 </script>
 
@@ -27,6 +27,8 @@ function handleGoBack() {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+
+  background-color: #fff;
 }
 
 .image {

@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+function changeToUserInfo() {
+  uni.navigateTo({
+    url: '/pages-user/user-settings/user-settings'
+  })
+}
+</script>
 
 <template>
   <vu-app-layout>
@@ -14,9 +20,10 @@
           class="rounded-full bg-[#f4f4f4] h-140 w-140"
           src="https://picsum.photos/600/600?random=10"
           mode="aspectFill"
+          @click="changeToUserInfo"
         />
         <view class="flex-1 ml-3">
-          <view class="font-bold text-lg text-[#333333]">真的灰常郝</view>
+          <view class="font-bold text-lg text-[#333333]" @click="changeToUserInfo">真的灰常郝</view>
           <view class="rounded flex bg-[#FFE4B7] mt-2 py-1 w-120 gap-1 items-center justify-center">
             <image class="h-24 w-24" src="@/static/icons/member.png" mode="scaleToFill" />
             <text class="text-22 text-[#5E5E5E]">已开通</text>
@@ -69,11 +76,11 @@
         <view class="flex mt-8 mb-3 items-center justify-between">
           <view class="flex flex-col items-center">
             <text class="text-[#6EA0F4] text-64 i-ic-round-payments"></text>
-            <text class="mt-3 text-sm text-[#434343]">代付款</text>
+            <text class="mt-3 text-sm text-[#434343]">待付款</text>
           </view>
           <view class="flex flex-col items-center">
             <text class="text-[#6EA0F4] text-64 i-ic-baseline-local-shipping"></text>
-            <text class="mt-3 text-sm text-[#434343]">代发货</text>
+            <text class="mt-3 text-sm text-[#434343]">待发货</text>
           </view>
           <view class="flex flex-col items-center">
             <text class="text-[#6EA0F4] text-64 i-bxs-calendar-check"></text>

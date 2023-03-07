@@ -1494,6 +1494,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify-json/mingcute@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.npmmirror.com/@iconify-json/mingcute/-/mingcute-1.1.5.tgz#d909b099e1caf67ad83fd5d5f10848f598572aa7"
+  integrity sha512-k2CaSPbi3YXvV2O0U+PLPJzjLF+5WqcqTGc1apEle06tj5GPqAwRjCpaZsHjWo8jYhnmi6YyjXJmS/VX+5Kx9g==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
