@@ -1,5 +1,5 @@
 <script setup lang="ts">
-function changeToUserInfo() {
+function changeToSettings() {
   uni.navigateTo({
     url: '/pages-user/user-settings/user-settings'
   })
@@ -14,16 +14,18 @@ function changeToUserInfo() {
     <vu-scrollable-view>
       <view class="bg-[#F4F9FF] rounded-bl-2xl rounded-br-2xl top-o h-300 w-full -z-99 fixed"></view>
       <!-- 头像、昵称 -->
-      <view class="h-50 w-full"></view>
+      <view class="flex space-x-4 h-100 px-5 items-center justify-end">
+        <text class="text-2xl text-[#333333] i-heroicons-bell"></text>
+        <text class="text-2xl text-[#333333] i-mingcute-settings-1-line" @click="changeToSettings"></text>
+      </view>
       <view class="flex pl-md box-border items-center justify-center">
         <image
           class="rounded-full bg-[#f4f4f4] h-140 w-140"
           src="https://picsum.photos/600/600?random=10"
           mode="aspectFill"
-          @click="changeToUserInfo"
         />
         <view class="flex-1 ml-3">
-          <view class="font-bold text-lg text-[#333333]" @click="changeToUserInfo">真的灰常郝</view>
+          <view class="font-bold text-lg text-[#333333]">真的灰常郝</view>
           <view class="rounded flex bg-[#FFE4B7] mt-2 py-1 w-120 gap-1 items-center justify-center">
             <image class="h-24 w-24" src="@/static/icons/member.png" mode="scaleToFill" />
             <text class="text-22 text-[#5E5E5E]">已开通</text>
