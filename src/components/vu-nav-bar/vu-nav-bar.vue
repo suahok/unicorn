@@ -12,7 +12,6 @@ type NavBarProp = {
 }
 
 const props = withDefaults(defineProps<NavBarProp>(), {
-  title: '标题',
   brightness: 'default',
   translucent: false,
   enableNavbar: true,

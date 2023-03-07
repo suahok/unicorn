@@ -12,4 +12,17 @@ onPageNotFound(() => {
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+/* #ifdef MP-WEIXIN */
+page {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+/* #endif */
+/* #ifdef H5 */
+body {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+/* #endif */
+</style>
