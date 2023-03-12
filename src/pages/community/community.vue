@@ -11,7 +11,7 @@ function onSwiperChange(evt: any) {
     <template #appbar>
       <vu-nav-bar title="社区"></vu-nav-bar>
     </template>
-    <view class="community">
+    <vu-scrollable-view>
       <swiper
         class="swiper"
         indicator-dots
@@ -34,7 +34,7 @@ function onSwiperChange(evt: any) {
           </view>
         </swiper-item>
       </swiper>
-    </view>
+    </vu-scrollable-view>
   </vu-app-layout>
 </template>
 

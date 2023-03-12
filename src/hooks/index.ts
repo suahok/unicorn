@@ -1,1 +1,1 @@
-export { default as useScreenInfo } from './useScreenInfo'
+export { useScreenInfo } from './screenInfo'

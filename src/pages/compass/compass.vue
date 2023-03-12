@@ -5,7 +5,7 @@
     <template #appbar>
       <vu-nav-bar title="指南"></vu-nav-bar>
     </template>
-    <view class="compass"></view>
+    <vu-scrollable-view></vu-scrollable-view>
   </vu-app-layout>
 </template>
 

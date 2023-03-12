@@ -1,4 +1,4 @@
-export default function () {
+export function useScreenInfo() {
   let appBarHeight = $ref(0)
   let menuRectWidth = $ref(0)
   let menuRectHeight = $ref(44)
