@@ -1,0 +1,93 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/journey/journey",
+      "style": {
+        "navigationBarTitleText": "行程"
+      }
+    },
+    {
+      "path": "pages/discover/discover",
+      "style": {
+        "navigationBarTitleText": "发现"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "searcher",
+      "pages": [
+        {
+          "path": "pages/index/index",
+          "style": {
+            "navigationBarTitleText": "搜索"
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": ["searcher"]
+    }
+  },
+  "tabBar": {
+    "color": "#50616D",
+    "selectedColor": "#FFC234",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home_c.png"
+      },
+      {
+        "pagePath": "pages/journey/journey",
+        "text": "行程",
+        "iconPath": "static/tabbar/journey.png",
+        "selectedIconPath": "static/tabbar/journey_c.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "static/tabbar/discover.png",
+        "selectedIconPath": "static/tabbar/discover_c.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine_c.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F0F0F4"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^(su)-(.*)": "@/components/su-$2/su-$2.vue",
+      "^(uni)-(.*)": "@dcloudio/uni-ui/lib/uni-$2/uni-$2.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-(.*)": "z-paging/components/z-$1/z-$1.vue"
+    }
+  }
+}

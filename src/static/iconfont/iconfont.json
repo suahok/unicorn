@@ -1,0 +1,58 @@
+{
+  "id": "4160162",
+  "name": "unicorn",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18130489",
+      "name": "Cartoon-Headset",
+      "font_class": "headset",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "18130496",
+      "name": "Cartoon-Wallet",
+      "font_class": "wallet",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "18130501",
+      "name": "Cartoon-Letter2",
+      "font_class": "letter",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "18099671",
+      "name": "IM",
+      "font_class": "msg",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "18099677",
+      "name": "Place",
+      "font_class": "place",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "18130495",
+      "name": "Cartoon-Seach",
+      "font_class": "seach",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "18130514",
+      "name": "Cartoon-Share",
+      "font_class": "share",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    }
+  ]
+}
