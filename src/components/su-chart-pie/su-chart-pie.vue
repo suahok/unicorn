@@ -10,11 +10,7 @@ onMounted(() => {
 
 function getCanvasElement() {
   const query = uni.createSelectorQuery()
-  query
-    .in(vueInstance)
-    .select('#canvas')
-    .boundingClientRect(node => createPieByCanvas(node))
-    .exec()
+  query.in(vueInstance).select('#canvas').boundingClientRect(createPieByCanvas).exec()
 }
 
 function createPieByCanvas(node: any) {
