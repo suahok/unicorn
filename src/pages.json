@@ -3,6 +3,7 @@
     {
       "path": "pages/home/home",
       "style": {
+        "navigationStyle": "custom",
         "navigationBarTitleText": "首页"
       }
     },
@@ -32,6 +33,7 @@
         {
           "path": "pages/index/index",
           "style": {
+            "navigationStyle": "custom",
             "navigationBarTitleText": "搜索"
           }
         }
@@ -77,7 +79,7 @@
     ]
   },
   "globalStyle": {
-    "navigationStyle": "custom",
+    "navigationStyle": "default",
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F0F0F4"

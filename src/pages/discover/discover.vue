@@ -18,29 +18,26 @@ const queryList = (pageNo: number, pageSize: number) => {
 </script>
 
 <template>
-  <view id="discover" class="flex flex-col h-full">
-    <su-nav-bar :title-center="true" title="发现"></su-nav-bar>
-    <view class="flex-1">
-      <z-paging
-        ref="paging"
-        v-model="dataList"
-        :fixed="false"
-        height="100%"
-        refresher-threshold="100rpx"
-        :loading-more-custom-style="{ 'font-size': '11px', 'letter-spacing': '0.05em' }"
-        loading-more-loading-icon-type="circle"
-        loading-more-no-more-text="我是有底线的"
-        :loading-more-no-more-line-custom-style="{ 'background-color': '#EAEAEA' }"
-        @query="queryList"
-      >
-        <template v-for="(v, i) in dataList" :key="i">
-          <view class="h-sm mx-sm mt-md bg-orange-500 rounded-2 grid place-content-center">
-            <text class="font-bold font-mono text-white">{{ v }}</text>
-          </view>
-        </template>
-      </z-paging>
+  <z-paging
+    ref="paging"
+    v-model="dataList"
+    :fixed="false"
+    height="100%"
+    refresher-threshold="100rpx"
+    loading-more-loading-icon-type="circle"
+    loading-more-no-more-text="我是有底线的"
+    :loading-more-title-custom-style="{ 'font-size': '12px' }"
+    :loading-more-no-more-line-custom-style="{ 'background-color': '#EAEAEA' }"
+    @query="queryList"
+  >
+    <view
+      v-for="(v, i) in dataList"
+      :key="i"
+      class="h-sm mx-sm mt-md bg-orange-500 rounded-2 grid place-content-center"
+    >
+      <text class="font-bold font-mono text-white">{{ v }}</text>
     </view>
-  </view>
+  </z-paging>
 </template>
 
 <style scoped></style>

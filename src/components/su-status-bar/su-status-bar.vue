@@ -26,6 +26,9 @@ const { statusBarHeight, menuRectTop, navbarHeight } = useStatusBar()
 const frontColor = props.barStyle === 'dark-content' ? '#000000' : '#FFFFFF'
 const navbarPaddingBottom = 7
 
+const rectHeight = menuRectTop - navbarPaddingBottom
+const navHeight = navbarHeight + navbarPaddingBottom * 2
+
 onBeforeMount(() => {
   uni.setNavigationBarColor({
     frontColor: frontColor,
@@ -48,8 +51,8 @@ onBeforeUnmount(() => {
 <template>
   <view class="status-bar" :style="{ background: bgColor }" :class="{ 'status-lucency': translucent }">
     <!-- #ifdef MP-WEIXIN -->
-    <view :style="{ height: menuRectTop - navbarPaddingBottom + 'px' }"></view>
-    <view v-if="enableNavbar" :style="{ height: navbarHeight + navbarPaddingBottom * 2 + 'px' }" class="status-content">
+    <view :style="{ height: rectHeight + 'px' }"></view>
+    <view v-if="enableNavbar" :style="{ height: navHeight + 'px' }" class="status-content">
       <slot></slot>
     </view>
     <!-- #endif -->
